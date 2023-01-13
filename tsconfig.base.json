@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "paths": {
+      "remote-component/App": ["./remote-component/src/App"]
+    }
+  },
+}

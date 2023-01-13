@@ -1,15 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
-const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
-const deps = require("./package.json").dependencies;
 
 module.exports = {
   entry: './src/index',
   mode: 'development',
   devServer: {
     static: path.join(__dirname, 'dist'),
-    port: 3001,
+    port: 3002,
   },
   output: {
     publicPath: 'auto',
@@ -34,15 +32,15 @@ module.exports = {
     ],
   },
   plugins: [
+    // To learn more about the usage of this plugin, please visit https://webpack.js.org/plugins/module-federation-plugin/
     new ModuleFederationPlugin({
-      name: 'consumer',
-      remotes: {
-        'remote-component':
-          'remote_component@[remoteComponentUrl]/remoteEntry.js',
+      name: 'remote_component',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './App': './src/App',
       },
       shared: ['react', 'react-dom'],
     }),
-    new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),

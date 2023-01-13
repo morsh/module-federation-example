@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
         backgroundColor: 'cyan',
       }}
     >
-      <h1>Remote Component</h1>
+      <h1>Remote Component 2</h1>
     </div>
   );
 };

@@ -1,17 +1,8 @@
 {
   "name": "module-federation",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "consumer",
-      "remote-component"
-    ]
-  },
   "scripts": {
-    "start": "lerna run --parallel start",
-    "build": "lerna run build"
-  },
-  "devDependencies": {
-    "lerna": "^4.0.0"
+    "start": "pnpm run -r --parallel start",
+    "build": "pnpm run -r build"
   }
 }

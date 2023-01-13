@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkremote_component=self.webpackChunkremote_component||[]).push([[413],{413:(e,n,t)=>{t.r(n),t.d(n,{default:()=>a});var c=t(471),r=t.n(c);const a=()=>r().createElement("div",{style:{margin:"10px",padding:"10px",textAlign:"center",backgroundColor:"cyan"}},r().createElement("h1",null,"App 2"))}}]);
