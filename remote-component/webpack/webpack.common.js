@@ -1,16 +1,13 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index',
   mode: 'development',
-  devServer: {
-    static: path.join(__dirname, 'dist'),
-    port: 3002,
-  },
   output: {
     publicPath: 'auto',
+    clean: true,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -29,7 +26,7 @@ module.exports = {
           presets: ['@babel/preset-react', '@babel/preset-typescript'],
         },
       },
-    ],
+    ]
   },
   plugins: [
     // To learn more about the usage of this plugin, please visit https://webpack.js.org/plugins/module-federation-plugin/
@@ -44,5 +41,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
+    new CopyWebpackPlugin({ patterns: [
+      {
+        from: 'public/assets', to: 'assets'
+      },
+    ]}),
   ],
 };

@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { init18n } from './i18n/i18n';
+
+init18n();
 
 const App = () => {
   return (

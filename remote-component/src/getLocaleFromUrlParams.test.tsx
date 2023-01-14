@@ -1,7 +1,5 @@
 import { getLocaleFromUrlParams } from './getLocaleFromUrlParams';
-import { Chance } from 'chance';
-
-const chance = new Chance();
+import { chance } from '../tests/chance';
 
 describe('getLocaleFromUrlParams', () => {
   it('should return "en" string', () => {

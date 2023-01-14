@@ -9,8 +9,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "i18next": "^20.3.2",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "i18next-http-backend": "^1.4.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.11.0"
   },
   "devDependencies": {
     "@babel/core": "7.18.9",
@@ -24,7 +28,9 @@
     "@types/react-dom": "17.0.2",
     "babel-loader": "8.2.5",
     "chance": "^1.1.9",
+    "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.3.1",
+    "i18n-loader": "^0.3.0",
     "jest": "^28.0.3",
     "jest-cli": "^28.0.3",
     "ts-jest": "^28.0.3",
