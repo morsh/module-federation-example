@@ -4,7 +4,11 @@ import { init18n } from './i18n/i18n';
 
 init18n();
 
-const App = withTranslation()(({ t }: WithTranslation) => (
+interface Props extends WithTranslation {
+  name: string;
+}
+
+const App = withTranslation()(({ t, name }: Props) => (
   <div
     style={{
       margin: '10px',
@@ -13,7 +17,7 @@ const App = withTranslation()(({ t }: WithTranslation) => (
       backgroundColor: 'cyan',
     }}
   >
-    <h1>{t('title')}</h1>
+    <h1>{t('title')} {name}</h1>
   </div>
 ));
 

@@ -16,7 +16,7 @@ const App = () => {
         <h1>Consumer 3</h1>
       </div>
       <Suspense fallback={'loading...'}>
-        <RemoteApp />
+        <RemoteApp name='Mor' />
       </Suspense>
     </div>
   );
