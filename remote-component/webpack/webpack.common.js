@@ -7,8 +7,11 @@ module.exports = {
   mode: 'development',
   output: {
     publicPath: 'auto',
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
     clean: true,
   },
+  
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
