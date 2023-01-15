@@ -6,3 +6,4 @@ This example, also includes:
 - TypeScript
 - Jest
 - React & ReactDOM as externals
+- i18next

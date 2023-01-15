@@ -11,7 +11,6 @@ module.exports = {
     chunkFilename: '[name].chunk.js',
     clean: true,
   },
-  
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
