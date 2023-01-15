@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { Services } from '../../services';
+import { createServices, Services } from '../../services';
 import { reducer } from '../reducers';
 
 interface CreateStoreParams {
   locale: string;
   isMock?: boolean;
-  services: Services;
+  services?: Services;
 }
 
 export const createStore = ({ locale, isMock, services }: CreateStoreParams) =>
@@ -15,7 +15,7 @@ export const createStore = ({ locale, isMock, services }: CreateStoreParams) =>
       getDefaultMiddleware({
         serializableCheck: false, // To repress non-serializable warnings on dates
         thunk: {
-          extraArgument: services,
+          extraArgument: services || createServices(),
         },
       }),
     preloadedState: {
