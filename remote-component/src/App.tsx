@@ -5,8 +5,9 @@ import { Title } from './components/Title/Title';
 import { createStore } from './redux/store/configureStore';
 import { useTranslation } from 'react-i18next';
 import { Loader } from './components/Loader/Loader';
+import { Helmet } from 'react-helmet';
 
-init18n(typeof __webpack_public_path__ === 'undefined' ? '' : __webpack_public_path__);
+init18n();
 
 interface Props {
   name: string;
@@ -24,21 +25,24 @@ const App = ({ name }: Props) => {
   }
 
   return (
-    <React.StrictMode>
-      <Provider store={store}>
-        <div
-          data-hook='app-remote-comp-root'
-          style={{
-            margin: '10px',
-            padding: '10px',
-            textAlign: 'center',
-            backgroundColor: 'red',
-          }}
-        >
-          <Title /><h2>{name}</h2>
-        </div>
-      </Provider>
-    </React.StrictMode>
+    <>
+      <Helmet htmlAttributes={{ lang: i18n.language, dir: i18n.dir() }} />
+      <React.StrictMode>
+        <Provider store={store}>
+          <div
+            data-hook='app-remote-comp-root'
+            style={{
+              margin: '10px',
+              padding: '10px',
+              textAlign: 'center',
+              backgroundColor: 'red',
+            }}
+          >
+            <Title /><h2>{name}</h2>
+          </div>
+        </Provider>
+      </React.StrictMode>
+    </>
   );
 }
     
