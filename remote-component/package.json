@@ -12,6 +12,7 @@
     "lint": "eslint src/*"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "i18next": "^20.3.2",
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.0",
@@ -19,6 +20,7 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.11.0",
     "react-is": "16.8.0",
+    "react-redux": "^8.0.1",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
@@ -43,6 +45,7 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "babel-loader": "8.2.5",
+    "builder-pattern": "^2.2.0",
     "chance": "^1.1.9",
     "copy-webpack-plugin": "^11.0.0",
     "eslint": "^8.32.0",

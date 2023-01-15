@@ -56,6 +56,7 @@ importers:
       '@babel/preset-react': 7.18.6
       '@babel/preset-typescript': 7.18.6
       '@module-federation/fmr': ^0.0.7
+      '@reduxjs/toolkit': ^1.8.1
       '@storybook/addon-actions': ^6.5.0
       '@storybook/addon-controls': ^6.5.0
       '@storybook/addon-essentials': ^6.5.0
@@ -73,6 +74,7 @@ importers:
       '@types/styled-components': ^5.1.26
       '@typescript-eslint/eslint-plugin': ^5.0.0
       babel-loader: 8.2.5
+      builder-pattern: ^2.2.0
       chance: ^1.1.9
       copy-webpack-plugin: ^11.0.0
       eslint: ^8.32.0
@@ -96,6 +98,7 @@ importers:
       react-dom: ^17.0.2
       react-i18next: ^11.11.0
       react-is: 16.8.0
+      react-redux: ^8.0.1
       storybook-addon-styled-component-theme: ^2.0.0
       styled-components: ^5.3.6
       ts-jest: ^28.0.3
@@ -105,6 +108,7 @@ importers:
       webpack-dev-server: ^4.0.0
       webpack-merge: ^5.8.0
     dependencies:
+      '@reduxjs/toolkit': 1.9.1_3m5k4ry2nwm36zz5ojtujpfkvq
       i18next: 20.6.1
       i18next-browser-languagedetector: 6.1.8
       i18next-http-backend: 1.4.5
@@ -112,6 +116,7 @@ importers:
       react-dom: 17.0.2_react@17.0.2
       react-i18next: 11.18.6_vuqjwpwape4qikc5ioig4ztvbm
       react-is: 16.8.0
+      react-redux: 8.0.5_es7oylc2hvz3vgk5ig3d5lq2ua
       styled-components: 5.3.6_qzsmqhtw3ep7ru2cbgbilj5h7a
     devDependencies:
       '@babel/core': 7.18.9
@@ -135,6 +140,7 @@ importers:
       '@types/styled-components': 5.1.26
       '@typescript-eslint/eslint-plugin': 5.48.1_7uibuqfxkfaozanbtbziikiqje
       babel-loader: 8.2.5_zvdanutkiqe2fzima36zi4ar4a
+      builder-pattern: 2.2.0
       chance: 1.1.9
       copy-webpack-plugin: 11.0.0_webpack@5.75.0
       eslint: 8.32.0
@@ -2159,6 +2165,25 @@ packages:
       webpack-dev-server: 4.11.1_pda42hcaj7d62cr262fr632kue
     dev: true
 
+  /@reduxjs/toolkit/1.9.1_3m5k4ry2nwm36zz5ojtujpfkvq:
+    resolution: {integrity: sha1-TDTcTdzsFhU1KIxg2lwZw+8VGA4=}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+    dependencies:
+      immer: 9.0.17
+      react: 17.0.2
+      react-redux: 8.0.5_es7oylc2hvz3vgk5ig3d5lq2ua
+      redux: 4.2.0
+      redux-thunk: 2.4.2_redux@4.2.0
+      reselect: 4.1.7
+    dev: false
+
   /@sinclair/typebox/0.24.51:
     resolution: {integrity: sha1-ZF8z/k4C3v4m8vXAQQ4cCU6sf18=}
     dev: true
@@ -3715,7 +3740,6 @@ packages:
     dependencies:
       '@types/react': 17.0.52
       hoist-non-react-statics: 3.3.2
-    dev: true
 
   /@types/html-minifier-terser/5.1.2:
     resolution: {integrity: sha1-aTsxatMj6pfu1rOO0aPMArFnK1c=}
@@ -3825,7 +3849,6 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha1-XxnSuFqY6VWANvajysyIGUIPBc8=}
-    dev: true
 
   /@types/qs/6.9.7:
     resolution: {integrity: sha1-Y7t9Bn2xB8weRXwwO8JdUR/r9ss=}
@@ -3839,7 +3862,6 @@ packages:
     resolution: {integrity: sha1-NWVM9sSa4WLVvJCEPVQ33DgAjUM=}
     dependencies:
       '@types/react': 17.0.52
-    dev: true
 
   /@types/react/17.0.52:
     resolution: {integrity: sha1-ENi5B7XFY6wBSlQfKJro6qm/Lps=}
@@ -3847,7 +3869,6 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
-    dev: true
 
   /@types/retry/0.12.0:
     resolution: {integrity: sha1-KzXsz87n04zXKtmSMvvVi/+zyE0=}
@@ -3855,7 +3876,6 @@ packages:
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=}
-    dev: true
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha1-2kv9c/Sb1UHSiSCrDivw7oD3HJE=}
@@ -3909,6 +3929,10 @@ packages:
   /@types/unist/2.0.6:
     resolution: {integrity: sha1-JQp7FsO5H2cqJFUuxkZ47rHToI0=}
     dev: true
+
+  /@types/use-sync-external-store/0.0.3:
+    resolution: {integrity: sha1-tnJdX0rySs4zs2+v0pUTbnVQn0M=}
+    dev: false
 
   /@types/webpack-env/1.18.0:
     resolution: {integrity: sha1-7W7KqOXtXf6LKz0AGBcCyZJfE/s=}
@@ -5280,6 +5304,10 @@ packages:
       isarray: 1.0.0
     dev: true
 
+  /builder-pattern/2.2.0:
+    resolution: {integrity: sha1-8eVviJKCSG+1s4UpR+kc0Jz+e3k=}
+    dev: true
+
   /builtin-status-codes/3.0.0:
     resolution: {integrity: sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=}
     dev: true
@@ -6075,7 +6103,6 @@ packages:
 
   /csstype/3.1.1:
     resolution: {integrity: sha1-hBtTLEXHWO5UahHVvXt7RzyMMLk=}
-    dev: true
 
   /currently-unhandled/0.4.1:
     resolution: {integrity: sha1-mI3zP+qxke95mmE2nddsF635V+o=}
@@ -8315,6 +8342,10 @@ packages:
     resolution: {integrity: sha1-opHAxheP8blgvv5H/N7DAWdKYyQ=}
     engines: {node: '>= 4'}
     dev: true
+
+  /immer/9.0.17:
+    resolution: {integrity: sha1-fP6Pu4tGEJZETp2npexKZ8bErfQ=}
+    dev: false
 
   /immutable/3.8.2:
     resolution: {integrity: sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=}
@@ -11260,11 +11291,43 @@ packages:
 
   /react-is/18.2.0:
     resolution: {integrity: sha1-GZQx7qqi4J+GQn77tPFHPttHYJs=}
-    dev: true
 
   /react-lifecycles-compat/3.0.4:
     resolution: {integrity: sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=}
     dev: true
+
+  /react-redux/8.0.5_es7oylc2hvz3vgk5ig3d5lq2ua:
+    resolution: {integrity: sha1-5fuDMZk6AZuKry4WepPRCvRpx70=}
+    peerDependencies:
+      '@types/react': ^16.8 || ^17.0 || ^18.0
+      '@types/react-dom': ^16.8 || ^17.0 || ^18.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+      react-native: '>=0.59'
+      redux: ^4
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+      redux:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.20.7
+      '@types/hoist-non-react-statics': 3.3.1
+      '@types/react': 17.0.52
+      '@types/react-dom': 17.0.2
+      '@types/use-sync-external-store': 0.0.3
+      hoist-non-react-statics: 3.3.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-is: 18.2.0
+      use-sync-external-store: 1.2.0_react@17.0.2
+    dev: false
 
   /react-refresh/0.11.0:
     resolution: {integrity: sha1-dxmLlEcz8PHxqQ55HeRUH58HQEY=}
@@ -11385,6 +11448,20 @@ packages:
       strip-indent: 1.0.1
     dev: true
     optional: true
+
+  /redux-thunk/2.4.2_redux@4.2.0:
+    resolution: {integrity: sha1-udBdEZlLmfepHqIj6LBM8K+l7zs=}
+    peerDependencies:
+      redux: ^4
+    dependencies:
+      redux: 4.2.0
+    dev: false
+
+  /redux/4.2.0:
+    resolution: {integrity: sha1-RvENbim2Zm33WHgEN2Ue6yuWnxM=}
+    dependencies:
+      '@babel/runtime': 7.20.7
+    dev: false
 
   /regenerate-unicode-properties/10.1.0:
     resolution: {integrity: sha1-fDGSyrbdJOIctEYeXd190k+oN0w=}
@@ -11584,6 +11661,10 @@ packages:
   /requires-port/1.0.0:
     resolution: {integrity: sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=}
     dev: true
+
+  /reselect/4.1.7:
+    resolution: {integrity: sha1-VkgNn/PTGIlw7it2UnvZSpVWekI=}
+    dev: false
 
   /resolve-cwd/3.0.0:
     resolution: {integrity: sha1-DwB18bslRHZs9zumpuKt/ryxPy0=}
@@ -13099,6 +13180,14 @@ packages:
       punycode: 1.3.2
       querystring: 0.2.0
     dev: true
+
+  /use-sync-external-store/1.2.0_react@17.0.2:
+    resolution: {integrity: sha1-fb79bvP+TnZ6DPXXKHqs+1hGkoo=}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /use/3.1.1:
     resolution: {integrity: sha1-1QyMrHmhn7wg8pEfVuuXP04QBw8=}
