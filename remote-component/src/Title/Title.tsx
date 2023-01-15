@@ -1,8 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-// import { title } from './Title.scss';
+import styled from 'styled-components';
+
+const StyledTitle = styled.h1`
+  background-color: blue;
+`
 
 export const Title = () => {
   const { t } = useTranslation();
-  return <h1>{t('title')}</h1>;
+  return <StyledTitle>{t('title')}</StyledTitle>;
 };
