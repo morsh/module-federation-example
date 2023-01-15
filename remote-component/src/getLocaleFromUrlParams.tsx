@@ -1,4 +1,4 @@
-export function getLocaleFromUrlParams(x: string) {
+export function getLocaleFromUrlParams (x: string) {
   const urlParams = new URLSearchParams(x);
-  return urlParams.get('locale') || 'en';
+  return urlParams.get('locale') ?? 'en';
 }

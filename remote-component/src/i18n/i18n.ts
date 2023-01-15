@@ -3,8 +3,8 @@ import { initReactI18next } from 'react-i18next';
 import i18nextHttpBackend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-export const init18n = () =>
-  i18n
+export const init18n = async () =>
+  await i18n
     .use(i18nextHttpBackend)
     .use(LanguageDetector)
     .use(initReactI18next)
@@ -20,6 +20,6 @@ export const init18n = () =>
         escapeValue: false, // react already safes from xss
       },
       backend: {
-        loadPath: `${__webpack_public_path__}assets/locales/{{lng}}.json`
+        loadPath: `${__webpack_public_path__}assets/locales/{{lng}}.json`,
       },
     });

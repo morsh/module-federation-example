@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledTitle = styled.h1`
   background-color: blue;
-`
+`;
 
 export const Title = () => {
   const { t } = useTranslation();
