@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { init18n } from './i18n/i18n';
-import { Title } from './Title/Title';
+import { Title } from './components/Title/Title';
 
 init18n();
 
