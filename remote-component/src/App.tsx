@@ -6,14 +6,11 @@ import { createStore } from './redux/store/configureStore';
 import { useTranslation } from 'react-i18next';
 import { Loader } from './components/Loader/Loader';
 import { Helmet } from 'react-helmet';
+import { AppProps } from './AppProps';
 
 init18n();
 
-interface Props {
-  name: string;
-}
-
-const App = ({ name }: Props) => {
+const App = ({ name }: AppProps) => {
   const { i18n } = useTranslation();
   const store = React.useMemo(
     () => createStore({ locale: i18n.language }),

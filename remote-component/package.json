@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && pnpm run build:lib",
+    "build:lib": "pnpm tsc -p tsconfig.lib.json",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006 -s public",

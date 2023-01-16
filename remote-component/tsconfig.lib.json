@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "files": ["src/lib.ts"],
+  "compilerOptions": {
+    "outFile": "./dist/lib.d.ts",
+    "module": "amd",
+    "declaration": true,
+    "emitDeclarationOnly": true
+  }
+}

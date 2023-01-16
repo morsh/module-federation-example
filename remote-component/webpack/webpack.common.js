@@ -3,7 +3,10 @@ const { ModuleFederationPlugin } = require('webpack').container;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index',
+  entry: {
+    main: './src/index',
+    lib: './src/lib',
+  },
   mode: 'development',
   output: {
     publicPath: 'auto',
