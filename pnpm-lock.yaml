@@ -76,6 +76,7 @@ importers:
       '@types/react-helmet': ^6.1.6
       '@types/styled-components': ^5.1.26
       '@types/testing-library__jest-dom': ^5.14.5
+      '@types/webpack-env': ^1.18.0
       '@typescript-eslint/eslint-plugin': ^5.0.0
       babel-loader: 8.2.5
       builder-pattern: ^2.2.0
@@ -151,6 +152,7 @@ importers:
       '@types/react-helmet': 6.1.6
       '@types/styled-components': 5.1.26
       '@types/testing-library__jest-dom': 5.14.5
+      '@types/webpack-env': 1.18.0
       '@typescript-eslint/eslint-plugin': 5.48.1_7uibuqfxkfaozanbtbziikiqje
       babel-loader: 8.2.5_zvdanutkiqe2fzima36zi4ar4a
       builder-pattern: 2.2.0
